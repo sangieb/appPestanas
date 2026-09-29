@@ -16,11 +16,11 @@ import {
   ],
 })
 export class Tab3Page {
-  nombre: string = 'Tu nombre';
-  carrera: string = 'Tu carrera';
-  correo: string = 'tucorreo@universidad.edu.co';
+  nombre: string = 'Angie Benites Gutierrez';
+  carrera: string = 'Ingeniería de Software';
+  correo: string = 'angie.benites@universidad.edu.co';
   telefono: string = '300 000 0000';
-  ciudad: string = 'Tu ciudad';
+  ciudad: string = 'Neiva, Huila';
   disponible: boolean = true;
 
   constructor() {}

@@ -14,8 +14,8 @@ import {
   ],
 })
 export class Tab1Page {
-  nombre: string = 'Tu nombre completo';
-  carrera: string = 'Tu carrera';
+  nombre: string = 'Angie Benites Gutierrez';
+  carrera: string = 'Ingeniería de Software';
 
   constructor() {}
 }
