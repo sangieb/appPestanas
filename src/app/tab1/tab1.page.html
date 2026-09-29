@@ -1,17 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+<ion-header>
+  <ion-toolbar class="degradado">
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content class="ion-padding">
+  <div class="hero">
+    <p class="saludo">{{ saludo }} 👋</p>
+    <h1>{{ nombre }}</h1>
+    <span class="etiqueta">{{ carrera }}</span>
+  </div>
+
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Bienvenido, {{ nombre }}</ion-card-title>
-      <ion-card-subtitle>{{ carrera }}</ion-card-subtitle>
+      <ion-card-title>Sobre mí</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Pestañas
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="school-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ carrera }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="business-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ universidad }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="calendar-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ semestre }}</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>

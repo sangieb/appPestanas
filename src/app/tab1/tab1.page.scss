@@ -1,0 +1,25 @@
+.hero {
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 28px 20px;
+  margin-bottom: 8px;
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+
+  .saludo {
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  h1 {
+    margin: 6px 0 12px;
+    font-weight: 700;
+  }
+
+  .etiqueta {
+    background: rgba(255, 255, 255, 0.25);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}

@@ -35,3 +35,21 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+:root {
+  --ion-font-family: 'Poppins', sans-serif;
+}
+
+ion-content {
+  --background: #f5f4fb;
+}
+
+ion-toolbar.degradado {
+  --background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  --color: #ffffff;
+}
+
+ion-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.12);
+}

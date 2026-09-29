@@ -1,31 +1,52 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+<ion-header>
+  <ion-toolbar class="degradado">
     <ion-title>Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content class="ion-padding">
   <ion-card>
-    <ion-card-header class="ion-text-center">
-      <ion-avatar class="avatar">
-        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="avatar" />
-      </ion-avatar>
-      <ion-card-title>{{ nombre }}</ion-card-title>
-      <ion-card-subtitle>{{ carrera }}</ion-card-subtitle>
-    </ion-card-header>
-
     <ion-card-content>
-      <ion-list>
-        <ion-item><ion-label>Correo: {{ correo }}</ion-label></ion-item>
-        <ion-item><ion-label>Teléfono: {{ telefono }}</ion-label></ion-item>
-        <ion-item><ion-label>Ciudad: {{ ciudad }}</ion-label></ion-item>
+      <div class="avatar-box" [class.ocupado]="!disponible">
+        <ion-avatar>
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="avatar" />
+        </ion-avatar>
+        <span class="punto"></span>
+      </div>
+
+      <h2 class="nombre">{{ nombre }}</h2>
+      <p class="carrera">{{ carrera }}</p>
+
+      <div class="ion-text-center">
+        <ion-chip [color]="disponible ? 'success' : 'danger'">
+          <ion-label>{{ disponible ? 'Disponible' : 'Ocupado' }}</ion-label>
+        </ion-chip>
+      </div>
+
+      <ion-item lines="none" class="item-toggle">
+        <ion-toggle [checked]="disponible" (ionChange)="cambiarEstado()" justify="space-between">
+          Estoy disponible
+        </ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="mail-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ correo }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ telefono }}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="location-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>{{ ciudad }}</ion-label>
+        </ion-item>
       </ion-list>
-      <div class="ion-text-center ion-margin-top">
-  <ion-chip [color]="disponible ? 'success' : 'danger'">
-    <ion-label>{{ disponible ? 'Disponible' : 'Ocupado' }}</ion-label>
-  </ion-chip>
-</div>
-<ion-button expand="block" (click)="cambiarEstado()">Cambiar estado</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
