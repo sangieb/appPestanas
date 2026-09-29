@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
   IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton
-} from '@ionic/angular/standalone';
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -22,7 +22,9 @@ export class Tab2Page {
     this.contador++;
   }
 
-  decrease() {
-    this.contador--;
+    decrease() {
+    if (this.contador > 0) {
+      this.contador--;
+    }
   }
 }
