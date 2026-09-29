@@ -21,6 +21,11 @@ export class Tab3Page {
   correo: string = 'tucorreo@universidad.edu.co';
   telefono: string = '300 000 0000';
   ciudad: string = 'Tu ciudad';
+  disponible: boolean = true;
 
   constructor() {}
+
+  cambiarEstado() {
+  this.disponible = !this.disponible;
+}
 }
